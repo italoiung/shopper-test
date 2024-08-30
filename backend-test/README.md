@@ -9,6 +9,9 @@ Fluid consumption measurement API using Google Gemini to transcribe numeric valu
 - Google GenerativeAI
 - ESLint + Prettier
 
+## TODO
+- [ ] Add Zod middleware to validate and sanitize requests
+
 ## API Reference
 
 #### Register measurement report
