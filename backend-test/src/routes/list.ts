@@ -21,7 +21,7 @@ export const list: RequestHandler<ReqParams, any, any, QueryParams> = async (
   };
 
   if (req.query.measure_type) {
-    where.AND = { typeId: req.query.measure_type };
+    where.AND = { typeId: req.query.measure_type.toUpperCase() };
   }
 
   try {
