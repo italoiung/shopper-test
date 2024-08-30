@@ -1,0 +1,30 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Customer {
+  id       String    @id @default(uuid())
+  measures Measure[]
+}
+
+model Type {
+  id       String    @id
+  measures Measure[]
+}
+
+model Measure {
+  id         String   @id @default(uuid())
+  measuredAt DateTime
+  value      Int
+  confirmed  Boolean  @default(false)
+  image      String
+  type       Type     @relation(fields: [typeId], references: [id])
+  typeId     String
+  customer   Customer @relation(fields: [customerId], references: [id])
+  customerId String
+}
