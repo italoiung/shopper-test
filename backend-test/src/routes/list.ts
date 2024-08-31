@@ -1,6 +1,6 @@
 import type { RequestHandler } from 'express';
 import type { Prisma } from '@prisma/client';
-import { prisma } from '../prisma';
+import { prisma } from '../prisma.js';
 
 type ReqParams = {
   customerId: string;

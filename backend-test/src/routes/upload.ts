@@ -1,8 +1,8 @@
 import type { RequestHandler } from 'express';
-import { prisma } from '../prisma';
-import { modelHandler } from '../utils/modelHandler';
-import { filesystemHandler } from '../utils/base64Handler';
-import { dateHandler } from '../utils/dateHandler';
+import { prisma } from '../prisma.js';
+import { modelHandler } from '../utils/modelHandler.js';
+import { filesystemHandler } from '../utils/base64Handler.js';
+import { dateHandler } from '../utils/dateHandler.js';
 
 type ReqBody = {
   image: string;
