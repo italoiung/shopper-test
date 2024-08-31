@@ -11,13 +11,23 @@ const customerData: Prisma.CustomerCreateInput[] = [
           image: 'example.jpeg',
           measuredAt: new Date(Date.now()),
           value: 13590,
-          type: { create: { id: 'GAS' } },
+          type: {
+            connectOrCreate: {
+              create: { id: 'GAS' },
+              where: { id: 'GAS' },
+            },
+          },
         },
         {
           image: 'example.jpeg',
           measuredAt: new Date(Date.now()),
           value: 13590,
-          type: { create: { id: 'WATER' } },
+          type: {
+            connectOrCreate: {
+              create: { id: 'WATER' },
+              where: { id: 'WATER' },
+            },
+          },
         },
       ],
     },
