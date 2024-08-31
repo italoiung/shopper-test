@@ -4,7 +4,9 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "tsx src/index.ts"
+    "dev": "tsx src/index.ts",
+    "build": "tsc",
+    "migrate:start": "npx prisma migrate deploy && node dist/prisma/seed.js && node dist/src/index.js"
   },
   "dependencies": {
     "@google/generative-ai": "^0.17.1",

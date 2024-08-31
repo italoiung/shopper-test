@@ -1,5 +1,5 @@
 import type { RequestHandler } from 'express';
-import { prisma } from '../prisma';
+import { prisma } from '../prisma.js';
 
 type ReqBody = {
   measure_uuid: string;
